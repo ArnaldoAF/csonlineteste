@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <script defer src="fontawesome/js/all.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container">
+            <a class="navbar-brand" href="#">CSOnline</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container text-center ">
+        <ul class="nav mr-auto text-center ">
+
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pedidos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Financeiro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Financeiro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Preços</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Chamados</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="container border border-primary">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Combustiveis Claro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Combustiveis Escuros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pedido de Arla</a>
+            </li>
+
+        </ul>
+        <div class="container-fluid border-bottom">
+            <h4><i class="fas fa-info"></i> INFORMAÇOES</h4>
+
+
+            <form action="">
+                <div class="row">
+                    <div class="form-group col-9">
+                        <label for="NomeEmpresa">Nome da Empresa</label>
+                        <select class="custom-select  form-control" id="NomeEmpresa" data-show-content="true">
+                            <option>Empresa</option>
+                            <option data-content="<i class='fas fa-search'></i> Buscar"><i class="fas fa-search"></i>
+                                Buscar</option>
+                            <option>445412 - UTO POSTO VELÔ ITU LTDA</option>
+                            <option>152233 - BENTO RIBEIRO COMBSTIVEL LTDA</option>
+                            <option>152233 - BENTO RIBEIRO COMBUSTVEIS LTDA</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="DataRetirada">Data de Retirada</label>
+                        <div class="input-group">
+
+                            <input type="text" id="DataRetirada" class="form-control" aria-describedby="IconDate1"
+                                placeholder="05/04/2019">
+                            <span class="input-group-append">
+                                <span class="input-group-text" id="IconDate1"><i class="far fa-calendar"></i></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="CondicaoCarregamentoGroup">Codição de Carregamento</label>
+                        <div class="container" id="CondicaoCarregamentoGroup">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="CondicaoCarregamento"
+                                    id="condicaoCarregamento1" value="option1">
+                                <label class="form-check-label" for="condicaoCarregamento1">
+                                    <span class="badge badge-info">CIF</span> </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="CondicaoCarregamento"
+                                    id="condicaoCarregamento2" value="option2" checked>
+                                <label class="form-check-label" for="condicaoCarregamento2">2
+                                    <span class="badge badge-primary">FOB</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-group">
+                            <label for="LocalRetirada">Local de retirada</label>
+                            <select class="custom-select " id="LocalRetirada">
+                                <option selected>BSP - Paulinia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-group col">
+                            <label for="placa">Placa</label>
+                            <select class="custom-select " id="placa">
+                                <option selected>AAA - 1234</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <label for="validationDefault01">CPF do motorista</label>
+                        <input type="text" class="form-control " id="validationDefault01" placeholder="First name"
+                            value="331482745-90">
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+        <div class="container-fluid border-bottom">
+            <h4><i class="fas fa-tint"></i> ITENS</h4>
+            <div class="container-fluid">
+                <div class="container-fluid">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-borderless">
+                                <th scope="col">Produto</th>
+                                <th scope="col">Quantidade em Litros</th>
+                                <th scope="col">CIF</th>
+                                <th scope="col">FOB</th>
+                                <th scope="col">Valor Total</th>
+                                <th scope="col">Condição PGTO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GASOLINA TIPO C GRANEL</td>
+                                <td class="row">
+                                    <div class="input-group col">
+                                        <input type="text" class="form-control" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2">Litros</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>R$ 3,53</td>
+                                <td>R$ 3,50</td>
+                                <td>R$ 0,00</td>
+                                <td class="row">
+                                    <select class="custom-select form-control col-10" id="NomeEmpresa"
+                                        data-show-content="true">
+                                        <option>2 dias</option>
+                                        <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
+                                        <option>Parcelado 30, 60, 90</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SHELL-V-POWER GASONLINE ADITIVADA</td>
+                                <td class="row">
+                                    <div class="input-group col">
+                                        <input type="text" class="form-control" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2">Litros</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>R$ 3,53</td>
+                                <td>R$ 3,50</td>
+                                <td>R$ 0,00</td>
+                                <td class="row">
+                                    <select class="custom-select form-control col-10" id="NomeEmpresa"
+                                        data-show-content="true">
+                                        <option>2 dias</option>
+                                        <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
+                                        <option>Parcelado 30, 60, 90</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table">
+                        <tr>
+                            <td>ETANOL HIDRATADO COMUM GRANEL</td>
+                            <td class="row">
+                                <div class="input-group col">
+                                    <input type="text" class="form-control" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">Litros</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 1,99</td>
+                            <td>R$ 2,02</td>
+                            <td>R$ 0,00</td>
+                            <td class="row">
+                                <select class="custom-select form-control col-10" id="NomeEmpresa"
+                                    data-show-content="true">
+                                    <option>2 dias</option>
+                                    <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
+                                    <option>Parcelado 30, 60, 90</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="table">
+                        <tr>
+                            <td>ÓLEO DIESEL B S10</td>
+                            <td class="row">
+                                <div class="input-group col">
+                                    <input type="text" class="form-control" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">Litros</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 2,03</td>
+                            <td>R$ 2,02</td>
+                            <td>R$ 0,00</td>
+                            <td class="row">
+                                <select class="custom-select form-control col-10" id="NomeEmpresa"
+                                    data-show-content="true">
+                                    <option>2 dias</option>
+                                    <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
+                                    <option>Parcelado 30, 60, 90</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SHELL EVOLUX DIESERL S-10' ADITIVADO</td>
+                            <td class="row">
+                                <div class="input-group col">
+                                    <input type="text" class="form-control" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">Litros</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 2,03</td>
+                            <td>R$ 2,03</td>
+                            <td>R$ 0,00</td>
+                            <td class="row">
+                                <select class="custom-select form-control col-10" id="NomeEmpresa"
+                                    data-show-content="true">
+                                    <option>2 dias</option>
+                                    <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
+                                    <option>Parcelado 30, 60, 90</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>OLEO DIESEL B S500'</td>
+                            <td class="row">
+                                <div class="input-group col">
+                                    <input type="text" class="form-control" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">Litros</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 2,00</td>
+                            <td>R$ 2,02</td>
+                            <td>R$ 0,00</td>
+                            <td class="row">
+                                <select class="custom-select form-control col-10" id="NomeEmpresa"
+                                    data-show-content="true">
+                                    <option>2 dias</option>
+                                    <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
+                                    <option>Parcelado 30, 60, 90</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SHELL EVOLUX DIESEL S-500' ADITIVADO</td>
+                            <td class="row">
+                                <div class="input-group col">
+                                    <input type="text" class="form-control" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">Litros</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 2,22</td>
+                            <td>R$ 2,02</td>
+                            <td>R$ 0,00</td>
+                            <td class="row">
+                                <select class="custom-select form-control col-10" id="NomeEmpresa"
+                                    data-show-content="true">
+                                    <option>2 dias</option>
+                                    <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
+                                    <option>Parcelado 30, 60, 90</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <p class="text-right">Total do seu pedido : R$0.00</p>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="container row align-items-start">
+                <button type="button" class="btn btn-outline-primary btn-lg col-3">Limpar</button>
+                <button type="button" class="btn btn-secondary btn-lg col-3 offset-6">Continuar</button>
+            </div>
+            <div class="container">
+                <p class="text-muted text-center">Os preços são fornecidos neste pedido são apenas a titulo de
+                    informação e podem não ser iguais ao preço real do pedido.</p>
+                <p class="text-muted text-center">Os preços reais para um pedido serão aplicaveis na dadta e horario em
+                    que este pedio será faturado pela nossa central</p>
+            </div>
+        </div>
+        
+        </div>
+        <footer class="page-footer">
+                <div class="container">
+                    <span class="text-muted">Place sticky footer content here.</span>
+                </div>
+    
+            </footer>
+
+</body>
+
+-
+
+</html>..
