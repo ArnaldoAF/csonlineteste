@@ -15,424 +15,343 @@
     <link rel="stylesheet" href="">
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <script defer src="fontawesome/js/all.js"></script>
+    <script src="js/vue.js"></script>
 
 
 </head>
 
 <body class="bg-light">
-    <!--[if lt IE 7]>
+    <div id="app">
+        <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white">
+            <div class="container">
+
+                <a class="navbar-brand" href="#">CSOnline</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu1"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="container  collapse navbar-collapse justify-content-end " id="menu1">
 
 
-    
+                    <div class="  d-inline-flex  m-2">
+                        <i class="far fa-bell d-flex justify-content-end"></i><span class="badge badge-light">4</span>
+                    </div>
+                    <div class=" d-inline-flex  m-2">
+                        <i class="fas fa-search d-flex justify-content-end"></i>
+                    </div>
+                    <div class="border-left d-inline-flex   text-wrap pl-3">
+                        <span class="text-wrap">1023044 - POSTOCOOLAPA LTDA <br> <i class="fas fa-gas-pump"></i>
+                            1234567890
+                            - (155.645.595/0001-01)</span>
+                    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
-        <div class="container">
-
-            <a class="navbar-brand" href="#">CSOnline</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu1"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="container  collapse navbar-collapse justify-content-end " id="menu1">
-
-
-                <div class="  d-inline-flex  m-2">
-                    <i class="far fa-bell d-flex justify-content-end"></i><span class="badge badge-light">4</span>
-                </div>
-                <div class=" d-inline-flex  m-2">
-                    <i class="fas fa-search d-flex justify-content-end"></i>
-                </div>
-                <div class="border-left d-inline-flex   text-wrap pl-3">
-                    <span class="text-wrap">1023044 - POSTOCOOLAPA LTDA <br> <i class="fas fa-gas-pump"></i> 1234567890
-                        - (155.645.595/0001-01)</span>
                 </div>
 
             </div>
-
-        </div>
-    </nav>
-
-    
+        </nav>
 
 
-    <div class="container-fluid   bg-white">
-        <div class="row  ">
-            <ul class="col nav mr-auto justify-content-center">
+        <div class="container-fluid   bg-white">
+            <div class="row  ">
+                <ul class="col nav mr-auto justify-content-center">
 
-                <li class="nav-item">
-                    <a class="nav-link  font-weight-light  text-dark active" href="#">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold  border-bottom border-dark" href="#">Pedidos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-light text-dark " href="#">Financeiro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-light text-dark " href="#">Financeiro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-light text-dark " href="#">Preços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-light text-dark " href="#">Chamados</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link  font-weight-light  text-dark active" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold  border-bottom border-dark" href="#">Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-light text-dark " href="#">Financeiro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-light text-dark " href="#">Financeiro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-light text-dark " href="#">Preços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-light text-dark " href="#">Chamados</a>
+                    </li>
 
-            </ul>
-        </div>
-    </div>
-
-    <div class="container border border-primary bg-white p-2 my-5">
-        <div class="container border-bottom">
-            <ul class="nav ">
-                <li class="nav-item">
-                    <a class="nav-link active font-weight-bold border-bottom border-dark font-weight-light"
-                        href="#">Combustiveis Claro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-light text-dark" href="#">Combustiveis Escuros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-light text-dark" href="#">Pedido de Arla</a>
-                </li>
-
-            </ul>
-        </div>
-
-        <div class="container">
-            <div class="container-fluid border-bottom p-4">
-                <h4 class="font-weight-light p-2"> <span class="p-2"><i class="fas fa-info "></i></span> INFORMAÇÕES DO
-                    PEDIDO</h4>
-
-                <form action="">
-                    <div class="row">
-                        <div class="form-group col-12 col-md-9">
-                            <label for="NomeEmpresa">Nome da Empresa</label>
-                            <select class="custom-select  form-control" id="NomeEmpresa" data-show-content="true">
-                                <option>Empresa</option>
-                                <option data-content="<i class='fas fa-search'></i> Buscar"><i
-                                        class="fas fa-search"></i>
-                                    Buscar</option>
-                                <option>445412 - UTO POSTO VELÔ ITU LTDA</option>
-                                <option>152233 - BENTO RIBEIRO COMBSTIVEL LTDA</option>
-                                <option>152233 - BENTO RIBEIRO COMBUSTVEIS LTDA</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-12 col-md-3">
-                            <label for="DataRetirada">Data de Retirada</label>
-                            <div class="input-group">
-
-                                <input type="text" id="DataRetirada" class="form-control" aria-describedby="IconDate1"
-                                    placeholder="05/04/2019">
-                                <span class="input-group-append">
-                                    <span class="input-group-text" id="IconDate1"><i class="far fa-calendar"></i></span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class=" col-6 col-md-3">
-                            <label for="CondicaoCarregamentoGroup">Codição de Carregamento</label>
-                            <div class="container" id="CondicaoCarregamentoGroup">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="CondicaoCarregamento"
-                                        id="condicaoCarregamento1" value="option1">
-                                    <label class="form-check-label" for="condicaoCarregamento1">
-                                        <span class="badge badge-info">CIF</span> </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="CondicaoCarregamento"
-                                        id="condicaoCarregamento2" value="option2" checked>
-                                    <label class="form-check-label" for="condicaoCarregamento2">2
-                                        <span class="badge badge-primary">FOB</span></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-6 col-md-2">
-                            <div class="form-group">
-                                <label for="LocalRetirada">Local de retirada</label>
-                                <select class="custom-select " id="LocalRetirada">
-                                    <option selected>BSP - Paulinia</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class=" col-6 col-md-2">
-                            <div class="form-group col">
-                                <label for="placa">Placa</label>
-                                <select class="custom-select " id="placa">
-                                    <option selected>AAA - 1234</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-2">
-                            <label for="validationDefault01">CPF do motorista</label>
-                            <input type="text" class="form-control " id="validationDefault01" placeholder="First name"
-                                value="331482745-90">
-                        </div>
-                    </div>
-                </form>
-
-
+                </ul>
             </div>
-            <div class="container-fluid border-bottom p-4">
-                <h4 class="font-weight-light p-2"> <span class="p-2"><i class="fas fa-tint "></i></span> ITENS</h4>
-                <div class="container-fluid">
-                    <div class="table-responsive-md">
-                        <table class="table table-borderless">
-                            <thead>
-                                <tr class="">
+        </div>
 
-                                    <th>Produto</th>
-                                    <th>Quantidade em Litros <i class="fas fa-question-circle" data-toggle="tooltip"
-                                            data-placement="top"
-                                            title="O preço CIF é informado referente a base que a Raízen realizará a entrega"></i>
-                                    </th>
-                                    <th>CIF</th>
-                                    <th>FOB</th>
-                                    <th>Valor Total</th>
-                                    <th>Condição PGTO <i class="fas fa-question-circle" data-toggle="tooltip"
-                                            data-placement="top"
-                                            title="A condiçao de pagamento é acordada previamente com o dept comercial"></i>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border">
-                                    <td class="mw-100"><i class="fas fa-circle text-warning"></i> GASOLINA TIPO C GRANEL
-                                    </td>
+        <div class="container border border-primary bg-white p-2 my-5">
+            <div class="container border-bottom">
+                <ul class="nav ">
+                    <li class="nav-item">
+                        <a class="nav-link active font-weight-bold border-bottom border-dark font-weight-light"
+                            href="#">Combustiveis Claro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-light text-dark" href="#">Combustiveis Escuros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-light text-dark" href="#">Pedido de Arla</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="container">
+                <div class="container-fluid border-bottom p-4">
+                    <h4 class="font-weight-light p-2"> <span class="p-2"><i class="fas fa-info "></i></span> INFORMAÇÕES
+                        DO PEDIDO</h4>
+
+                    <form action="">
+                        <div class="row">
+                            <div class="form-group col-12 col-md-9">
+                                <label for="NomeEmpresa">Nome da Empresa</label>
+                                <select class="custom-select  form-control" id="NomeEmpresa" data-show-content="true"
+                                    v-model="empresa">
+                                    <option>Empresa</option>
+                                    <option data-content="<i class='fas fa-search'></i> Buscar"><i
+                                            class="fas fa-search"></i>
+                                        Buscar
+                                    </option>
+                                    <option v-for="emp in empresas">{{emp}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-12 col-md-3">
+                                <label for="DataRetirada">Data de Retirada</label>
+                                <div class="input-group">
+
+                                    <input type="text" id="DataRetirada" class="form-control"
+                                        aria-describedby="IconDate1" :placeholder="dataDeRetirada">
+                                    <span class="input-group-append">
+                                        <span class="input-group-text" id="IconDate1"><i
+                                                class="far fa-calendar"></i></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col-6 col-md-3">
+                                <label for="CondicaoCarregamentoGroup">Codição de Carregamento</label>
+                                <div class="container" id="CondicaoCarregamentoGroup">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="CondicaoCarregamento"
+                                            id="condicaoCarregamento1" value="option1" v-model="condicaoCarregamento">
+                                        <label class="form-check-label" for="condicaoCarregamento1">
+                                            <span class="badge badge-info">CIF</span> </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="CondicaoCarregamento"
+                                            id="condicaoCarregamento2" value="option2" checked
+                                            v-model="condicaoCarregamento">
+                                        <label class="form-check-label" for="condicaoCarregamento2">2
+                                            <span class="badge badge-primary">FOB</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-6 col-md-2">
+                                <div class="form-group">
+                                    <label for="LocalRetirada">Local de retirada</label>
+                                    <select class="custom-select " id="LocalRetirada" v-model="localRetirada">
+                                        <option v-for="local in locaisRetirada">{{local}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class=" col-6 col-md-2">
+                                <div class="form-group col">
+                                    <label for="placa">Placa</label>
+                                    <select class="custom-select " id="placa" v-model="placa">
+                                        <option v-for="pl in placas">{{pl}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <label for="validationDefault01">CPF do motorista</label>
+                                <input type="text" class="form-control " id="validationDefault01"
+                                    placeholder="First name" v-model="CPF">
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="container-fluid border-bottom p-4">
+                    <h4 class="font-weight-light p-2"> <span class="p-2"><i class="fas fa-tint "></i></span> ITENS</h4>
+                    <div class="container-fluid">
+                        <div class="table-responsive-md">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr class="">
+
+                                        <th>Produto</th>
+                                        <th>Quantidade em Litros <i class="fas fa-question-circle" data-toggle="tooltip"
+                                                data-placement="top"
+                                                title="O preço CIF é informado referente a base que a Raízen realizará a entrega"></i>
+                                        </th>
+                                        <th>CIF</th>
+                                        <th>FOB</th>
+                                        <th>Valor Total</th>
+                                        <th>Condição PGTO <i class="fas fa-question-circle" data-toggle="tooltip"
+                                                data-placement="top"
+                                                title="A condiçao de pagamento é acordada previamente com o dept comercial"></i>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(item,index) in itens" class="border" v-if="index<2">
+                                        <td class="mw-100"><i class="fas fa-circle " v-bind:class="item.color"></i>
+                                            {{item.produto}}</td>
+                                        <td class="row">
+                                            <div class="input-group col">
+                                                <input type="text" class="form-control" aria-describedby="basic-addon2"
+                                                    :value="item.litros">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" id="basic-addon2">Litros</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-nowrap">R$ {{item.cif}}</td>
+                                        <td class="text-nowrap">R$ {{item.fob}}</td>
+                                        <td class="text-nowrap"> R$ {{item.valorTotal}}</td>
+                                        <td class="row">
+                                            <select class="custom-select form-control col-10" id="NomeEmpresa"
+                                                data-show-content="true" v-model="item.condicaoPagamento">
+                                                <option>2 dias</option>
+                                                <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
+                                                <option>Parcelado 30, 60, 90</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+
+                            <table class="table table-borderless ">
+
+                                <tr v-for="(item,index) in itens" class="border" v-if="index==2">
+                                    <td class="mw-100"><i class="fas fa-circle " v-bind:class="item.color"></i>
+                                        {{item.produto}}</td>
                                     <td class="row">
                                         <div class="input-group col">
-                                            <input type="text" class="form-control" aria-describedby="basic-addon2">
+                                            <input type="text" class="form-control" aria-describedby="basic-addon2"
+                                                :value="item.litros">
                                             <div class="input-group-append">
                                                 <span class="input-group-text" id="basic-addon2">Litros</span>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="text-nowrap">R$ 3,53</td>
-                                    <td class="text-nowrap">R$ 3,50</td>
-                                    <td class="text-nowrap"> R$ 0,00</td>
+                                    <td class="text-nowrap">R$ {{item.cif}}</td>
+                                    <td class="text-nowrap">R$ {{item.fob}}</td>
+                                    <td class="text-nowrap"> R$ {{item.valorTotal}}</td>
                                     <td class="row">
                                         <select class="custom-select form-control col-10" id="NomeEmpresa"
-                                            data-show-content="true">
+                                            data-show-content="true" v-model="item.condicaoPagamento">
                                             <option>2 dias</option>
                                             <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
                                             <option>Parcelado 30, 60, 90</option>
                                         </select>
                                     </td>
                                 </tr>
-                                <tr class="border">
-                                    <td><i class="fas fa-circle text-danger"></i> SHELL-V-POWER GASONLINE ADITIVADA</td>
+                            </table>
+
+                            <table class="table table-borderless">
+                                <tr v-for="(item,index) in itens" class="border" v-if="index>2">
+                                    <td class="mw-100"><i class="fas fa-circle " v-bind:class="item.color"></i>
+                                        {{item.produto}}</td>
                                     <td class="row">
                                         <div class="input-group col">
-                                            <input type="text" class="form-control" aria-describedby="basic-addon2">
+                                            <input type="text" class="form-control" aria-describedby="basic-addon2"
+                                                :value="item.litros">
                                             <div class="input-group-append">
                                                 <span class="input-group-text" id="basic-addon2">Litros</span>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="text-nowrap">R$ 3,53</td>
-                                    <td class="text-nowrap">R$ 3,50</td>
-                                    <td class="text-nowrap">R$ 0,00</td>
+                                    <td class="text-nowrap">R$ {{item.cif}}</td>
+                                    <td class="text-nowrap">R$ {{item.fob}}</td>
+                                    <td class="text-nowrap"> R$ {{item.valorTotal}}</td>
                                     <td class="row">
                                         <select class="custom-select form-control col-10" id="NomeEmpresa"
-                                            data-show-content="true">
+                                            data-show-content="true" v-model="item.condicaoPagamento">
                                             <option>2 dias</option>
                                             <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
                                             <option>Parcelado 30, 60, 90</option>
                                         </select>
                                     </td>
                                 </tr>
+                            </table>
 
-                            </tbody>
-                        </table>
-
-                        <table class="table table-borderless ">
-
-                            <tr class="border ">
-                                <td class="mw-100"> <i class="fas fa-circle text-info"></i> ETANOL HIDRATADO COMUM
-                                    GRANEL</td>
-                                <td class="row">
-                                    <div class="input-group col">
-                                        <input type="text" class="form-control" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="basic-addon2">Litros</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="text-nowrap">R$ 1,99</td>
-                                <td class="text-nowrap">R$ 2,02</td>
-                                <td class="text-nowrap">R$ 0,00</td>
-                                <td class="row ">
-                                    <select class="custom-select form-control col-10 " id="NomeEmpresa"
-                                        data-show-content="true">
-                                        <option>2 dias</option>
-                                        <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
-                                        <option>Parcelado 30, 60, 90</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="table table-borderless">
-                            <tr class="border">
-                                <td><i class="fas fa-circle text-success"></i> ÓLEO DIESEL B S10</td>
-                                <td class="row">
-                                    <div class="input-group col">
-                                        <input type="text" class="form-control" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="basic-addon2">Litros</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="text-nowrap">R$ 2,03</td>
-                                <td class="text-nowrap">R$ 2,02</td>
-                                <td class="text-nowrap">R$ 0,00</td>
-                                <td class="row ">
-                                    <select class="custom-select form-control col-10" id="NomeEmpresa"
-                                        data-show-content="true">
-                                        <option>2 dias</option>
-                                        <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
-                                        <option>Parcelado 30, 60, 90</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr class="border">
-                                <td><i class="fas fa-circle text-success"></i> SHELL EVOLUX DIESERL S-10' ADITIVADO</td>
-                                <td class="row">
-                                    <div class="input-group col">
-                                        <input type="text" class="form-control" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="basic-addon2">Litros</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>R$ 2,03</td>
-                                <td>R$ 2,03</td>
-                                <td>R$ 0,00</td>
-                                <td class="row">
-                                    <select class="custom-select form-control col-10" id="NomeEmpresa"
-                                        data-show-content="true">
-                                        <option>2 dias</option>
-                                        <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
-                                        <option>Parcelado 30, 60, 90</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr class="border">
-                                <td><i class="fas fa-circle text-success"></i> OLEO DIESEL B S500'</td>
-                                <td class="row">
-                                    <div class="input-group col">
-                                        <input type="text" class="form-control" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="basic-addon2">Litros</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>R$ 2,00</td>
-                                <td>R$ 2,02</td>
-                                <td>R$ 0,00</td>
-                                <td class="row">
-                                    <select class="custom-select form-control col-10" id="NomeEmpresa"
-                                        data-show-content="true">
-                                        <option>2 dias</option>
-                                        <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
-                                        <option>Parcelado 30, 60, 90</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr class="border">
-                                <td><i class="fas fa-circle text-success"></i> SHELL EVOLUX DIESEL S-500' ADITIVADO</td>
-                                <td class="row">
-                                    <div class="input-group col">
-                                        <input type="text" class="form-control" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="basic-addon2">Litros</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>R$ 2,22</td>
-                                <td>R$ 2,02</td>
-                                <td>R$ 0,00</td>
-                                <td class="row">
-                                    <select class="custom-select form-control col-10" id="NomeEmpresa"
-                                        data-show-content="true">
-                                        <option>2 dias</option>
-                                        <option>Faturamento de 1 a 31.venc 29 proximo mes</option>
-                                        <option>Parcelado 30, 60, 90</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="table">
-                            <tr>
-                                <td>
-                                    <p class="text-right">Total do seu pedido : R$0.00</p>
-                                </td>
-                            </tr>
-                        </table>
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <p class="text-right">Total do seu pedido : R$ {{totalPedido}}</p>
+                                    </td>
+                                </tr>
+                            </table>
 
 
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container p-4">
+                    <div class="container row align-items-start p-2">
+                        <button type="button" class="btn btn-outline-primary btn-lg col-6 col-md-3">Limpar</button>
+                        <button type="button"
+                            class="btn btn-secondary btn-lg col-6 col-md-3 offset-md-6">Continuar</button>
+                    </div>
+                    <div class="container text-center">
+                        <span class="text-muted ">Os preços são fornecidos neste pedido são apenas a titulo de
+                            informação e
+                            podem não ser iguais ao preço real do pedido.</span><br>
+                        <span class="text-muted ">Os preços reais para um pedido serão aplicaveis na dadta e horario em
+                            que
+                            este pedio será faturado pela nossa central</span>
                     </div>
                 </div>
+            </div>
 
-            </div>
-            <div class="container p-4">
-                <div class="container row align-items-start p-2">
-                    <button type="button" class="btn btn-outline-primary btn-lg col-6 col-md-3">Limpar</button>
-                    <button type="button" class="btn btn-secondary btn-lg col-6 col-md-3 offset-md-6">Continuar</button>
-                </div>
-                <div class="container text-center">
-                    <span class="text-muted ">Os preços são fornecidos neste pedido são apenas a titulo de informação e
-                        podem não ser iguais ao preço real do pedido.</span><br>
-                    <span class="text-muted ">Os preços reais para um pedido serão aplicaveis na dadta e horario em que
-                        este pedio será faturado pela nossa central</span>
-                </div>
-            </div>
         </div>
+        <footer class="page-footer ">
+            <div class="container">
+                <div class="row align-items-center justify-content-end">
+                    <div class="card text-white bg-primary col-12 col-md-3">
+                        <div class="card-header text-center">
+                            <h5><i class="fas fa-headset"></i> CHAT ONLINE </h5>
+                        </div>
 
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+        <footer class="page-footer border-primary border-top bg-white">
+            <div class="container p-3">
+                <div class="row align-items-center">
+                    <img src="img/logo.png" class=" rounded float-left img-fluid col-6 col-md-2" alt="...">
+                    <div class="col-6 offset-md-4 align-middle text-right">
+                        <ul class="nav mr-auto text-center  ">
+
+                            <li class="nav-item ">
+                                <a class="nav-link " href="#">TERMOS E CONDIÇÕES</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#">CONFIDENCIALIDADE</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#">CONTATO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
     </div>
-    <footer class="page-footer ">
-        <div class="container">
-            <div class="row align-items-center justify-content-end">
-                <div class="card text-white bg-primary col-12 col-md-3">
-                    <div class="card-header text-center">
-                        <h5><i class="fas fa-headset"></i> CHAT ONLINE </h5>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-    </footer>
-    <footer class="page-footer border-primary border-top bg-white">
-        <div class="container p-3">
-            <div class="row align-items-center">
-                <img src="img/logo.png" class=" rounded float-left img-fluid col-6 col-md-2" alt="...">
-                <div class="col-6 offset-md-4 align-middle text-right">
-                    <ul class="nav mr-auto text-center  ">
-
-                        <li class="nav-item ">
-                            <a class="nav-link " href="#">TERMOS E CONDIÇÕES</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#">CONFIDENCIALIDADE</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#">CONTATO</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-
 </body>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -445,6 +364,106 @@
         console.log($('[data-toggle="tooltip"]').tooltip());
     }
     );
+
+
+
+</script>
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        mounted: function () {
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        },
+        data: {
+            message: 'Hello Vue!',
+            empresa: "Empresa",
+            empresas: [
+                "445412 - UTO POSTO VELÔ ITU LTDA",
+                "152233 - BENTO RIBEIRO COMBSTIVEL LTDA",
+                "152233 - BENTO RIBEIRO COMBUSTVEIS LTDA"
+            ],
+            dataDeRetirada: "01/01/2019",
+            condicaoCarregamento: "",
+            localRetirada: "BSP - Paulinia",
+            locaisRetirada: [
+                "BSP - Paulinia"
+            ],
+            placa: "AAA - 1234",
+            placas: [
+                "AAA - 1234"
+            ],
+            CPF: "331.482.745-90",
+            itens: [
+                {
+                    color: "text-warning",
+                    produto: "GASOLINA TIPO C GRANEL",
+                    qtdLitro: "0,00",
+                    cif: "3,53",
+                    fob: "3,50",
+                    valorTotal: "0,00",
+                    condicaoPagamento: "2 dias"
+                },
+                {
+                    color: "text-danger",
+                    produto: "SHELL-V-POWER GASONLINE ADITIVADA",
+                    qtdLitro: "0,00",
+                    cif: "3,53",
+                    fob: "3,50",
+                    valorTotal: "0,00",
+                    condicaoPagamento: "2 dias"
+                },
+                {
+                    color: "text-info",
+                    produto: "ETANOL HIDRATADO COMUM GRANEL",
+                    qtdLitro: "0,00",
+                    cif: "1,99",
+                    fob: "2,02",
+                    valorTotal: "0,00",
+                    condicaoPagamento: "2 dias"
+                },
+                {
+                    color: "text-success",
+                    produto: "ÓLEO DIESEL B S10",
+                    qtdLitro: "0,00",
+                    cif: "2,03",
+                    fob: "2,02",
+                    valorTotal: "0,00",
+                    condicaoPagamento: "2 dias"
+                },
+                {
+                    color: "text-success",
+                    produto: "SHELL EVOLUX DIESERL S-10' ADITIVADO",
+                    qtdLitro: "0,00",
+                    cif: "2,03",
+                    fob: "2,03",
+                    valorTotal: "0,00",
+                    condicaoPagamento: "2 dias"
+                },
+                {
+                    color: "text-success",
+                    produto: "OLEO DIESEL B S500'",
+                    qtdLitro: "0,00",
+                    cif: "2,00",
+                    fob: "2,02",
+                    valorTotal: "0,00",
+                    condicaoPagamento: "2 dias"
+                },
+                {
+                    color: "text-success",
+                    produto: "SHELL EVOLUX DIESEL S-500' ADITIVADO",
+                    qtdLitro: "0,00",
+                    cif: "2,22",
+                    fob: "2,02",
+                    valorTotal: "0,00",
+                    condicaoPagamento: "2 dias"
+                }
+            ],
+            totalPedido: "0,00"
+        }
+    })
 
 </script>
 
