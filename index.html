@@ -186,16 +186,23 @@
                                     <tr class="">
 
                                         <th>Produto</th>
-                                        <th>Quantidade em Litros <i class="fas fa-question-circle" data-toggle="tooltip"
-                                                data-placement="top"
-                                                title="O preço CIF é informado referente a base que a Raízen realizará a entrega"></i>
+                                        <th>Quantidade em
+
+                                            <button type="button" class="btn btn-primary btn-sm"
+                                                v-on:click="medidaState=!medidaState">{{medida}} </button>
+
                                         </th>
-                                        <th>CIF</th>
+                                        <th class="text-primary">CIF
+                                            <span data-toggle="tooltip" data-placement="top"
+                                                title="O preço CIF é informado referente a base que a Raízen realizará a entrega"><i
+                                                    class="fas fa-question-circle text-dark"></i></span>
+
+                                        </th>
                                         <th>FOB</th>
                                         <th>Valor Total</th>
-                                        <th>Condição PGTO <i class="fas fa-question-circle" data-toggle="tooltip"
-                                                data-placement="top"
-                                                title="A condiçao de pagamento é acordada previamente com o dept comercial"></i>
+                                        <th>Condição PGTO <span data-toggle="tooltip" data-placement="top"
+                                                title="A condiçao de pagamento é acordada previamente com o dept comercial"><i
+                                                    class="fas fa-question-circle"></i></span>
                                         </th>
                                     </tr>
                                 </thead>
@@ -208,11 +215,11 @@
                                                 <input type="text" class="form-control" aria-describedby="basic-addon2"
                                                     :value="item.litros">
                                                 <div class="input-group-append">
-                                                    <span class="input-group-text" id="basic-addon2">Litros</span>
+                                                    <span class="input-group-text" id="basic-addon2">{{medida}}</span>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="text-nowrap">R$ {{item.cif}}</td>
+                                        <td class="text-nowrap text-primary">R$ {{item.cif}}</td>
                                         <td class="text-nowrap">R$ {{item.fob}}</td>
                                         <td class="text-nowrap"> R$ {{item.valorTotal}}</td>
                                         <td class="row">
@@ -239,11 +246,11 @@
                                             <input type="text" class="form-control" aria-describedby="basic-addon2"
                                                 :value="item.litros">
                                             <div class="input-group-append">
-                                                <span class="input-group-text" id="basic-addon2">Litros</span>
+                                                <span class="input-group-text" id="basic-addon2">{{medida}}</span>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="text-nowrap">R$ {{item.cif}}</td>
+                                    <td class="text-nowrap text-primary">R$ {{item.cif}}</td>
                                     <td class="text-nowrap">R$ {{item.fob}}</td>
                                     <td class="text-nowrap"> R$ {{item.valorTotal}}</td>
                                     <td class="row">
@@ -266,11 +273,11 @@
                                             <input type="text" class="form-control" aria-describedby="basic-addon2"
                                                 :value="item.litros">
                                             <div class="input-group-append">
-                                                <span class="input-group-text" id="basic-addon2">Litros</span>
+                                                <span class="input-group-text" id="basic-addon2">{{medida}}</span>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="text-nowrap">R$ {{item.cif}}</td>
+                                    <td class="text-nowrap text-primary">R$ {{item.cif}}</td>
                                     <td class="text-nowrap">R$ {{item.fob}}</td>
                                     <td class="text-nowrap"> R$ {{item.valorTotal}}</td>
                                     <td class="row">
@@ -284,10 +291,12 @@
                                 </tr>
                             </table>
 
+                            
+
                             <table class="table">
                                 <tr>
                                     <td>
-                                        <p class="text-right">Total do seu pedido : R$ {{totalPedido}}</p>
+                                        <p class="text-right">Total do seu pedido : <span class="font-weight-bold">R$ {{totalPedido}}</span> </p>
                                     </td>
                                 </tr>
                             </table>
@@ -301,7 +310,7 @@
                     <div class="container row align-items-start p-2">
                         <button type="button" class="btn btn-outline-primary btn-lg col-6 col-md-3">Limpar</button>
                         <button type="button"
-                            class="btn btn-secondary btn-lg col-6 col-md-3 offset-md-6">Continuar</button>
+                            class="btn btn-secondary btn-lg col-6 col-md-3 offset-md-6" data-toggle="modal" data-target="#continuarModal">Continuar</button>
                     </div>
                     <div class="container text-center">
                         <span class="text-muted ">Os preços são fornecidos neste pedido são apenas a titulo de
@@ -313,7 +322,56 @@
                     </div>
                 </div>
             </div>
+<!-- Button trigger modal -->
 
+      
+      <!-- Modal -->
+      <div class="modal fade" id="continuarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">SEU PEDIDO</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <table class="table border">
+                        <tbody>
+                            <tr>
+                                <th>Empresa</th>
+                                <td>{{empresa}}</td>
+                            </tr>
+                            <tr>
+                                    <th>Data retirada</th>
+                                    <td>{{dataDeRetirada}}</td>
+                            </tr>
+                            <tr>
+                                <th>Local Retirada</th>
+                                <td>{{locaisRetirada}} </td>
+                            <tr>
+                                    <th>Placa</th>
+                                    <td>{{placa}} </td>
+                            </tr>
+                            <tr>
+                                    <th>CPF</th>
+                                    <td>{{CPF}} </td>
+                            </tr>
+                            <tr>
+                                    <th>TOTAL</th>
+                                    <th>{{totalPedido}} </th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+              <button type="button" class="btn btn-primary">CONCLUIR</button>
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
         <footer class="page-footer ">
             <div class="container">
@@ -387,7 +445,7 @@
             ],
             dataDeRetirada: "01/01/2019",
             condicaoCarregamento: "",
-            localRetirada: "BSP - Paulinia",
+            locaisRetirada: "BSP - Paulinia",
             locaisRetirada: [
                 "BSP - Paulinia"
             ],
@@ -461,8 +519,17 @@
                     condicaoPagamento: "2 dias"
                 }
             ],
-            totalPedido: "0,00"
-        }
+            totalPedido: "0,00",
+            medida: "Litros",
+            medidaState: true
+        },
+        watch: {
+            medidaState: function (a) {
+                if (a) { this.medida = 'Litros' }
+                else { this.medida = 'M³' }
+
+            }
+        },
     })
 
 </script>
